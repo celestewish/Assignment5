@@ -7,32 +7,16 @@ import org.junit.jupiter.api.Test;
 
 class PrintPrimesTest {
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
+	//tests the first path I included by not going inside of the loop
 	@Test
-	void testIsDivisible() {
-		
-	}
-
-	@Test
-	void testPrintPrimes() {
+	void testPrintPrimes1() {
 		String myString = PrintPrimes.printPrimes(0);
-		assertEquals("", myString);
+		assertEquals(" 2", myString);
 	}
-
+	//runs through every edge, but doesn't touch every path
 	@Test
-	void testMain() {
-		fail("Not yet implemented");
+	void testPrintPrimes2() {
+		String myString = PrintPrimes.printPrimes(2);
+		assertEquals(" 2 3", myString);
 	}
-
 }
